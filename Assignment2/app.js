@@ -50,13 +50,13 @@ app.get("/posts/addPost", (req, res) => {
 });
 
 app.post("/posts", async (req, res) => {
-  const { author, title, post, description } = req.body;
+  const { author, title, content, description } = req.body;
   const newPost = {
     id: uuid(),
     author: author,
     title: title,
     description: description,
-    post: post,
+    post: content,
   };
 
   await posts.push(newPost);
@@ -77,6 +77,16 @@ app.get("/posts/:id", async (req, res) => {
     }
   }
   res.render("post", { post });
+});
+
+app.delete("/posts/:id", async (req, res) => {
+  const { id } = req.params;
+
+  posts = posts.filter((c) => c.id != id);
+
+  await savePosts();
+
+  res.redirect("/posts");
 });
 
 app.listen(3000, () => {
