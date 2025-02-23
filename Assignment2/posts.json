@@ -1,12 +1,5 @@
 [
   {
-    "id": "c098a1b8-d378-407d-8698-0ecfa0102511",
-    "author": "Alice Johnson",
-    "title": "The Future of Web Development",
-    "description": "Exploring the latest trends in web technologies.",
-    "post": "Web development is evolving rapidly with frameworks like React, Vue, and Svelte gaining traction. This post explores how developers can adapt to these changes."
-  },
-  {
     "id": "c098a1b8-d378-407d-8698-0ecfa0102512",
     "author": "John Smith",
     "title": "Understanding JavaScript Closures",
